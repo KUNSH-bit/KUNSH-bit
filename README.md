@@ -172,3 +172,6 @@ Exploring ideas across artificial intelligence, software and hardware.
 <p align="center">
   <sub>Designed & built by KUNSH AGARWAL · 2026</sub>
 </p>
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=KUNSH-bit&label=PROFILE+VIEWS&color=58A6FF&style=for-the-badge" alt="Profile Views" />
+</p>
