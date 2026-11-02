@@ -31,7 +31,7 @@
 ## `02 / ACTIVITY MONITOR`
 
 <p align="center">
-  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=KUNSH-bit&theme=github-dark-blue&hide_border=true&background=0D1117" alt="GitHub Streak" />
+  <a href="https://git.io/streak-stats"><img src="https://github-readme-streak-stats.herokuapp.com?user=KUNSH-bit&theme=dark&hide_border=true&timezone=IST&short_numbers=true" alt="GitHub Streak" /></a>
 </p>
 
 ## `03 / TECHNOLOGY STACK`
