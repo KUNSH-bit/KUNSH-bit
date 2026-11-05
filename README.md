@@ -34,18 +34,18 @@
   <a href="https://git.io/streak-stats"><img src="https://github-readme-beta-mocha.vercel.app?user=KUNSH-bit&theme=highcontrast&hide_border=true&short_numbers=true" alt="GitHub Streak" /></a>
 </p>
 
-## `03 / TECHNOLOGY STACK`
+## `03 / TECH STACK`
 
 ### Languages
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,cpp,c,java,js,rust,html,css&theme=dark" alt="Programming Languages" />
+  <img src="https://skillicons.dev/icons?i=python,cpp,c,dart,js,rust,html,css,ts,react&theme=dark" alt="Programming Languages" />
 </p>
 
 ### Frameworks & Tools
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=opencv,flutter,git,github,vscode,arduino,sklearn&theme=dark" alt="Frameworks and Tools" />
+  <img src="https://skillicons.dev/icons?i=opencv,flutter,git,github,vscode,arduino,sklearn,vite,mysql,sqlite&theme=dark" alt="Frameworks and Tools" />
 </p>
 
 
