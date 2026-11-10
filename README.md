@@ -146,6 +146,8 @@ Exploring ideas across artificial intelligence, software and hardware.
     width="100%"
     alt="GitHub Contribution Calendar"
   />
+  <!-- START_CODING_COUNTER -->
+<!-- END_CODING_COUNTER -->
 </p>
 
 <p align="center">
