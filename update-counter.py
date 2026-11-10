@@ -1,11 +1,11 @@
-from datetime import date
+
+from datetime import date, datetime
 from zoneinfo import ZoneInfo
 import calendar
-import re
 
 START_DATE = date(2026, 8, 1)
 
-today = date.today()
+today = datetime.now(ZoneInfo("Asia/Kolkata")).date()
 
 def add_months(d, months):
     month = d.month - 1 + months
@@ -30,22 +30,29 @@ month_date = add_months(year_date, months)
 
 days = (today - month_date).days
 
-result = f"{years} Year • {months} Months • {days} Days"
+result = f"{years} Years • {months} Months • {days} Days"
 
 with open("README.md", "r", encoding="utf-8") as file:
     content = file.read()
 
-pattern = r"(<!-- START_CODING_COUNTER -->).*?(<!-- END_CODING_COUNTER -->)"
-
 replacement = f"""<!-- START_CODING_COUNTER -->
 ## ⏱ Journey
 
-Started coding on 23 June 2025
+Started coding on **1 August 2026**
 
 **{result}**
 <!-- END_CODING_COUNTER -->"""
 
-content = re.sub(pattern, lambda m: replacement, content, flags=re.DOTALL)
+if "<!-- START_CODING_COUNTER -->" in content:
+    import re
+    content = re.sub(
+        r"<!-- START_CODING_COUNTER -->.*?<!-- END_CODING_COUNTER -->",
+        lambda m: replacement,
+        content,
+        flags=re.DOTALL
+    )
+else:
+    content += "\n\n" + replacement + "\n"
 
 with open("README.md", "w", encoding="utf-8") as file:
     file.write(content)
