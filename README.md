@@ -147,9 +147,7 @@ Exploring ideas across artificial intelligence, software and hardware.
     alt="GitHub Contribution Calendar"
   />
   <!-- START_CODING_COUNTER -->
-## ⏱ Journey
-
-Started coding on **1 August 2026**
+Started GitHub on **1 August 2026**
 
 **0 Year • 3 Months • 10 Days**
 <!-- END_CODING_COUNTER -->
