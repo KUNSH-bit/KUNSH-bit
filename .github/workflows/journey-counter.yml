@@ -1,5 +1,5 @@
 
-name: Update Coding Journey
+name: Update Coding Age
 
 on:
   schedule:
@@ -17,13 +17,83 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Update counter
-        run: python update_counter.py
+      - name: Update README counter
+        run: |
+          python - <<'PY'
+          from datetime import date, datetime
+          from zoneinfo import ZoneInfo
+          import calendar
+          import re
 
-      - name: Commit changes
+          START_DATE = date(2026, 8, 1)
+          today = datetime.now(ZoneInfo("Asia/Kolkata")).date()
+
+          if today < START_DATE:
+              raise ValueError("Start date is in the future")
+
+          def add_months(d, months):
+              month = d.month - 1 + months
+              year = d.year + month // 12
+              month = month % 12 + 1
+              day = min(d.day, calendar.monthrange(year, month)[1])
+              return date(year, month, day)
+
+          years = today.year - START_DATE.year
+
+          if (today.month, today.day) < (START_DATE.month, START_DATE.day):
+              years -= 1
+
+          year_date = add_months(START_DATE, years)
+
+          months = (today.year - year_date.year) * 12 + today.month - year_date.month
+
+          if today.day < year_date.day:
+              months -= 1
+
+          month_date = add_months(year_date, months)
+          days = (today - month_date).days
+
+          result = f"{years} Year • {months} Months • {days} Days"
+
+          with open("README.md", "r", encoding="utf-8") as f:
+              content = f.read()
+
+          replacement = f"""<!-- START_CODING_COUNTER -->
+          ## ⏱ Journey
+
+          Started coding on **1 August 2026**
+
+          **{result}**
+          <!-- END_CODING_COUNTER -->"""
+
+          pattern = r"<!-- START_CODING_COUNTER -->.*?<!-- END_CODING_COUNTER -->"
+
+          if re.search(pattern, content, flags=re.DOTALL):
+              content = re.sub(
+                  pattern,
+                  lambda m: replacement,
+                  content,
+                  count=1,
+                  flags=re.DOTALL
+              )
+          else:
+              content += "\n\n" + replacement + "\n"
+
+          with open("README.md", "w", encoding="utf-8") as f:
+              f.write(content)
+
+          print("Updated coding age:", result)
+          PY
+
+      - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git diff --cached --quiet || git commit -m "Update coding journey counter"
-          git push
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update coding age"
+            git push
+          fi
