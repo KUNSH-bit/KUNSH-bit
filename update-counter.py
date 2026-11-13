@@ -3,7 +3,7 @@ from datetime import date, datetime
 from zoneinfo import ZoneInfo
 import calendar
 
-START_DATE = date(2026, 8, 1)
+START_DATE = date(2026, 7, 27)
 
 today = datetime.now(ZoneInfo("Asia/Kolkata")).date()
 
@@ -36,9 +36,7 @@ with open("README.md", "r", encoding="utf-8") as file:
     content = file.read()
 
 replacement = f"""<!-- START_CODING_COUNTER -->
-## ⏱ Journey
-
-Started coding on **1 August 2026**
+Started Posting on Github on **27 July 2026**
 
 **{result}**
 <!-- END_CODING_COUNTER -->"""
