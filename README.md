@@ -151,7 +151,7 @@ Exploring ideas across artificial intelligence, software and hardware.
 
 Started coding on **1 August 2026**
 
-**0 Year • 3 Months • 12 Days**
+**0 Year • 3 Months • 13 Days**
 <!-- END_CODING_COUNTER -->
 </p>
 
