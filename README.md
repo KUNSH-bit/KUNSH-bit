@@ -45,7 +45,7 @@
 ### Frameworks & Tools
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=opencv,flutter,git,github,vscode,arduino,sklearn,vite,mysql,sqlite&theme=dark" alt="Frameworks and Tools" />
+  <img src="https://skillicons.dev/icons?i=opencv,flutter,git,github,vscode,arduino,sklearn,vite,mysql,sqlite,postgresql,mongodb&theme=dark" alt="Frameworks and Tools" />
 </p>
 
 
