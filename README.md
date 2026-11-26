@@ -39,7 +39,7 @@
 ### Languages
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,cpp,c,dart,js,rust,html,css,ts,react&theme=dark" alt="Programming Languages" />
+  <img src="https://skillicons.dev/icons?i=python,cpp,c,dart,js,rust,html,css,ts,react,golang&theme=dark" alt="Programming Languages" />
 </p>
 
 ### Frameworks & Tools
